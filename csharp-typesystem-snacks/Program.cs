@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-/*1. L’utente inserisce due numeri in successione. Il software stampa il maggiore.
+/*
+//1. L’utente inserisce due numeri in successione. Il software stampa il maggiore.
 Console.WriteLine("L’utente inserisce due numeri in successione. Il software stampa il maggiore.");
 
 //L'utente inserisce il primo numero
@@ -24,7 +25,8 @@ else if (firstNum == secondNum)
 {
    Console.WriteLine("I numeri sono uguali."); // controlla se i numeri sono uguali e stampa un messaggio 
 }
-*/
+
+
 
 // 2. L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
 Console.WriteLine("L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.");
@@ -52,4 +54,25 @@ else if(firstWord.Length == secondWord.Length)
 {
     Console.WriteLine("Le parole hanno la stessa lunghezza");
 }
+*/
 
+
+
+//  3. Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
+0int[] num = new int[10]; //dichiaro un array con 10 elemnti di tipo int all'interno
+int sum = 0; //inizializzo variabile somma a 0
+Console.WriteLine("Inserisci 10 numeri: ");
+
+for (var i=0; i < 10; i++) //ciclo for per far inserire all'uitente 10 numeri
+{
+    int newNum = Convert.ToInt32(Console.ReadLine()); //l'utente inserisce 10 numeri
+    num[i] = newNum; // ogni numero inserito viene pushato all'interno dell'array
+}
+ 
+for (var i=0; i < num.Length; i++) //ciclo per far stampare il risultato sommando i numeri all'interno dell'array
+{
+    sum += num[i]; //somma dei numeriù
+}
+
+var res = sum;
+Console.WriteLine($"La somma è: {res}"); //stampa del risultato
