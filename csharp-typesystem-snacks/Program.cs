@@ -59,7 +59,7 @@ else if(firstWord.Length == secondWord.Length)
 
 
 //  3. Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
-0int[] num = new int[10]; //dichiaro un array con 10 elemnti di tipo int all'interno
+int[] num = new int[10]; //dichiaro un array con 10 elemnti di tipo int all'interno
 int sum = 0; //inizializzo variabile somma a 0
 Console.WriteLine("Inserisci 10 numeri: ");
 
@@ -74,5 +74,5 @@ for (var i=0; i < num.Length; i++) //ciclo per far stampare il risultato sommand
     sum += num[i]; //somma dei numeriù
 }
 
-var res = sum;
+var res = sum; //la somma viene salvata in questa variabile res per il risultato
 Console.WriteLine($"La somma è: {res}"); //stampa del risultato
