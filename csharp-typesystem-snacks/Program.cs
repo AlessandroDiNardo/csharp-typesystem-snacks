@@ -105,19 +105,44 @@ if(num % 2 == 0) //conmdizione per verificare se il numero è pari o dispari
 }
 else
     Console.WriteLine($"Il numero che hai inserito è dispari quindi vieni stampato il numero successivo: {num + 1}");  // se il numero è dispari viene stampato il numero successivo
-*/
 
 
 
 //6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
-string[] people = { "Luca", "Marco", "Luigi", "Francesco", "Alessandro", "Antonio", "Angela", "Luisa", "Maria", "Miriam" };
-Console.WriteLine("Inserisci il tuo nome: ");
-string newPeople = Console.ReadLine();
+string[] people = { "Luca", "Marco", "Luigi", "Francesco", "Alessandro", "Antonio", "Angela", "Luisa", "Maria", "Miriam" }; //inizializzo un array con degli elemtni all'interno
+Console.WriteLine("Inserisci il tuo nome: ");// Viene chiesto all'utente di inserire il suo nome 
+string newPeople = Console.ReadLine();//L'utente inserisce il suo nome
 
-if (people.Contains(newPeople))
+if (people.Contains(newPeople)) //Condizione per controllare se il nome dell'utente fa parte della lista
 {
-    Console.WriteLine("Puoi entrare");
+    Console.WriteLine("Puoi entrare"); //Se è nella lista può entrare
 }
 else
     Console.WriteLine("Non puoi entrare");
+*/
+
+
+
+//7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+using System;
+
+int[] num = new int[6];
+int newNum;
+
+Console.WriteLine("Inserisci 6 numeri: ");
+
+for (int i = 0; i < 6; i++)
+{
+    newNum = Convert.ToInt32(Console.ReadLine());
+    if (newNum % 2 == 1)
+    {
+        num[i] = newNum;
+    }
+}
+
+Console.WriteLine("Numeri dispari inseriti:");
+foreach (int oddNum in num)
+{
+    Console.WriteLine(oddNum);
+}
 
