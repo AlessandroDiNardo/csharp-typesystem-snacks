@@ -193,7 +193,6 @@ foreach(var newNUm in num) // ciclo per mostrare i numeri inseriti
 {
     Console.WriteLine(newNUm);
 }
-*/
 
 
 
@@ -209,5 +208,42 @@ for (int i = 0; i < num; i++) //ciclo per creare N array in base al numero inser
     {
         array[j] = rand.Next(1, 100);
     }
-    Console.WriteLine("Array #" + (i + 1) + ": " + string.Join(", ", array)); //vengono stampati gli N array con i 10 elementi casuali
+    Console.WriteLine("Array #" + (i + 1) + ": " + string.Join(", ", array)); //vengono stampati gli N array con i 10 elementi casuali, string join aggiunge virgola dopo ogni numero
+}
+*/
+
+
+
+//1. Dare la possibilità di inserire due parole.
+//Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+
+Console.WriteLine("Inserisci la prima parola:"); //l'utente inserisce la prima parola
+string firstWord = Console.ReadLine();
+    
+Console.WriteLine("Inserisci la seconda parola:"); //l'utente inserisce la seconda parola
+string secondWord = Console.ReadLine();
+
+checkWord(firstWord, secondWord);
+
+static void checkWord(string firstWord, string secondWord)
+{
+
+    if (firstWord.Length == secondWord.Length)
+    {
+        Console.WriteLine("Le due parole hanno la stessa lunghezza:");
+        Console.WriteLine(firstWord);
+        Console.WriteLine(secondWord);
+    }
+    else
+    {
+        Console.WriteLine("Le due parole hanno lunghezze diverse.");
+        if (firstWord.Length > secondWord.Length)
+        {
+            Console.WriteLine("La parola più lunga è: " + firstWord);
+        }
+        else
+        {
+            Console.WriteLine("La parola più lunga è: " + secondWord);
+        }
+    }
 }
