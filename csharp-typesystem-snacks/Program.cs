@@ -92,7 +92,6 @@ avarage = sum / 9; //calcolo della media
 
 Console.WriteLine($"la somma è: {res}"); //stampa risultato somma 
 Console.WriteLine($"la media è: {avarage}"); //stampa media
-*/
 
 
 
@@ -106,6 +105,19 @@ if(num % 2 == 0) //conmdizione per verificare se il numero è pari o dispari
 }
 else
     Console.WriteLine($"Il numero che hai inserito è dispari quindi vieni stampato il numero successivo: {num + 1}");  // se il numero è dispari viene stampato il numero successivo
+*/
 
 
+
+//6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+string[] people = { "Luca", "Marco", "Luigi", "Francesco", "Alessandro", "Antonio", "Angela", "Luisa", "Maria", "Miriam" };
+Console.WriteLine("Inserisci il tuo nome: ");
+string newPeople = Console.ReadLine();
+
+if (people.Contains(newPeople))
+{
+    Console.WriteLine("Puoi entrare");
+}
+else
+    Console.WriteLine("Non puoi entrare");
 
