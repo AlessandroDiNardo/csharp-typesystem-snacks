@@ -25,7 +25,7 @@ else if (firstNum == secondNum)
 {
    Console.WriteLine("I numeri sono uguali."); // controlla se i numeri sono uguali e stampa un messaggio 
 }
-*/
+
 
 
 // 2. L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
@@ -55,7 +55,7 @@ else if(firstWord.Length == secondWord.Length)
     Console.WriteLine("Le parole hanno la stessa lunghezza");
 }
 
-/*
+
 
 //  3. Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
 int[] num = new int[10]; //dichiaro un array con 10 elemnti di tipo int all'interno
@@ -144,3 +144,21 @@ foreach (int oddNum in num) // ciclo per stampare i numeri dispari
 }
 */
 
+
+
+//8. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+int[] num =  { 3, 2, 3, 7, 4, 5, 8, 1, 2};
+int sum = 0;
+
+for (int i = 0; i < num.Length; i += 2)
+{
+    sum += num[i];
+}
+
+Console.WriteLine("I numeri sonno:");
+
+foreach (int i in num)
+{
+    Console.WriteLine(i);
+}
+Console.WriteLine($"La somma dei numeri in posizione dispari è: {sum}");
