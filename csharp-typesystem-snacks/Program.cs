@@ -1,7 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
 
-//1. L’utente inserisce due numeri in successione. Il software stampa il maggiore.
+/*1. L’utente inserisce due numeri in successione. Il software stampa il maggiore.
+Console.WriteLine("L’utente inserisce due numeri in successione. Il software stampa il maggiore.");
+
 //L'utente inserisce il primo numero
 Console.WriteLine("Inserisci il primo numero: ");
 int firstNum = Convert.ToInt32(Console.ReadLine());
@@ -22,5 +23,33 @@ else if(secondNum > firstNum)
 else if (firstNum == secondNum)
 {
    Console.WriteLine("I numeri sono uguali."); // controlla se i numeri sono uguali e stampa un messaggio 
+}
+*/
+
+// 2. L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
+Console.WriteLine("L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.");
+Console.WriteLine("");
+
+//L'utente inserisce la prima parola
+Console.WriteLine("Inserisci la prima parola: ");
+string firstWord = Console.ReadLine();
+
+//L'utente inserisce la seconda parola
+Console.WriteLine("Inserisci la seconda parola: ");
+string secondWord = Console.ReadLine();
+Console.WriteLine("");
+
+if (
+    firstWord.Length > secondWord.Length)
+{
+    Console.WriteLine(secondWord);
+}
+else if(firstWord.Length < secondWord.Length)
+{
+    Console.WriteLine(firstWord);
+}
+else if(firstWord.Length == secondWord.Length)
+{
+    Console.WriteLine("Le parole hanno la stessa lunghezza");
 }
 
