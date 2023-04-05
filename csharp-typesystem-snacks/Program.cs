@@ -142,23 +142,55 @@ foreach (int oddNum in num) // ciclo per stampare i numeri dispari
 {
     Console.WriteLine(oddNum);
 }
-*/
 
 
 
 //8. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
-int[] num =  { 3, 2, 3, 7, 4, 5, 8, 1, 2};
-int sum = 0;
+int[] num =  { 3, 2, 3, 7, 4, 5, 8, 1, 2}; //Creo un array con 9 numeri all'interno
+int sum = 0; // dichiaro variabile somma con valore 0
 
-for (int i = 0; i < num.Length; i += 2)
+for (int i = 0; i < num.Length; i += 2) //ciclo for per fare la somma dei numeri all'interno in posizione dispari
 {
     sum += num[i];
 }
 
 Console.WriteLine("I numeri sonno:");
 
-foreach (int i in num)
+foreach (int i in num) // ciclo per stampare l'array di numeri
 {
     Console.WriteLine(i);
+}   
+
+Console.WriteLine($"La somma dei numeri in posizione dispari è: {sum}");  // stampa della somma dei numeri in posizione dispari
+*/
+
+
+
+//9. Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+int[] num = Array.Empty<int>();
+int sum = 0;
+
+do
+{
+Console.WriteLine("Inserisci un numero: ");
+int newNum = Convert.ToInt32(Console.ReadLine());
+
+Array.Resize(ref num, num.Length + 1);
+num[num.Length - 1] = newNum;
+
+sum += newNum;
+
+} while (sum < 50);
+{
+    if (sum > 50)
+    {
+        Console.WriteLine($"Mi spiace la somma è: {sum}, ritenta");
+    }else
+         Console.WriteLine($"La somma è: {sum}");
 }
-Console.WriteLine($"La somma dei numeri in posizione dispari è: {sum}");
+
+Console.WriteLine("Hai inserito i seguenti numeri");
+foreach(var newNUm in num)
+{
+    Console.WriteLine(newNUm);
+}
