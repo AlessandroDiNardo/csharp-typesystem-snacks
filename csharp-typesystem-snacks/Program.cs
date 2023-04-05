@@ -54,7 +54,6 @@ else if(firstWord.Length == secondWord.Length)
 {
     Console.WriteLine("Le parole hanno la stessa lunghezza");
 }
-*/
 
 
 
@@ -76,3 +75,20 @@ for (var i=0; i < num.Length; i++) //ciclo per far stampare il risultato sommand
 
 var res = sum; //la somma viene salvata in questa variabile res per il risultato
 Console.WriteLine($"La somma è: {res}"); //stampa del risultato
+*/
+
+
+
+//Calcola la somma e la media dei numeri da 2 a 10.
+int sum = 0;
+double avarage;
+
+for (var i = 2; i <= 10; i++)
+{
+    sum += i;
+}
+
+avarage = sum / 9;
+
+Console.WriteLine($"la somma è: {sum}");
+Console.WriteLine($"la media è: {avarage}");
