@@ -78,17 +78,21 @@ Console.WriteLine($"La somma è: {res}"); //stampa del risultato
 */
 
 
+//4. Calcola la somma e la media dei numeri da 2 a 10.
+int sum = 0; //dichiaro variabile somma con valore 0
+double avarage; // dichiaro variabile per la media
 
-//Calcola la somma e la media dei numeri da 2 a 10.
-int sum = 0;
-double avarage;
-
-for (var i = 2; i <= 10; i++)
+for (var i = 2; i <= 10; i++) //ciclo per calcolare somma dei numeri da 2 a 10
 {
-    sum += i;
+    sum += i; // somma dei numeri
 }
 
-avarage = sum / 9;
+var res = sum; //la somma viene salvata in questa variabile res per il risultato
+avarage = sum / 9; //calcolo della media
 
-Console.WriteLine($"la somma è: {sum}");
-Console.WriteLine($"la media è: {avarage}");
+Console.WriteLine($"la somma è: {res}"); //stampa risultato somma 
+Console.WriteLine($"la media è: {avarage}"); //stampa media
+
+
+
+
