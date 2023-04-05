@@ -75,7 +75,7 @@ for (var i=0; i < num.Length; i++) //ciclo per far stampare il risultato sommand
 
 var res = sum; //la somma viene salvata in questa variabile res per il risultato
 Console.WriteLine($"La somma è: {res}"); //stampa del risultato
-*/
+
 
 
 //4. Calcola la somma e la media dei numeri da 2 a 10.
@@ -92,7 +92,20 @@ avarage = sum / 9; //calcolo della media
 
 Console.WriteLine($"la somma è: {res}"); //stampa risultato somma 
 Console.WriteLine($"la media è: {avarage}"); //stampa media
+*/
 
+
+
+//5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+Console.WriteLine("Inserisci un numero: ");// Viene chiesto all'utente di inserire un numero
+int num = Convert.ToInt32(Console.ReadLine()); //l'utente inserisce un numero
+
+if(num % 2 == 0) //conmdizione per verificare se il numero è pari o dispari
+{
+    Console.WriteLine($"Il numero che hai inserito è pari: {num}"); //se il numero è pari viene inserito a schermo
+}
+else
+    Console.WriteLine($"Il numero che hai inserito è dispari quindi vieni stampato il numero successivo: {num + 1}");  // se il numero è dispari viene stampato il numero successivo
 
 
 
