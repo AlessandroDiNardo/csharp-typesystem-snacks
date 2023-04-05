@@ -162,27 +162,26 @@ foreach (int i in num) // ciclo per stampare l'array di numeri
 }   
 
 Console.WriteLine($"La somma dei numeri in posizione dispari è: {sum}");  // stampa della somma dei numeri in posizione dispari
-*/
 
 
 
 //9. Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
-int[] num = Array.Empty<int>();
-int sum = 0;
+int[] num = Array.Empty<int>(); //Creo array vuoto
+int sum = 0; // dichiaro variabile somma con valore 0
 
-do
+do //ciclo do, l'utente inseirisce un numero finchè la somma è 50
 {
 Console.WriteLine("Inserisci un numero: ");
 int newNum = Convert.ToInt32(Console.ReadLine());
 
-Array.Resize(ref num, num.Length + 1);
+Array.Resize(ref num, num.Length + 1); //numero viene inserito nell'array
 num[num.Length - 1] = newNum;
 
-sum += newNum;
+sum += newNum; // somma dei numeri inseriti
 
 } while (sum < 50);
 {
-    if (sum > 50)
+    if (sum > 50) // se la somma è maggiore di 50 epaare un messaggio di ritentare altrimenti esce la somma di 50 dei numeri inseriti
     {
         Console.WriteLine($"Mi spiace la somma è: {sum}, ritenta");
     }else
@@ -190,7 +189,25 @@ sum += newNum;
 }
 
 Console.WriteLine("Hai inserito i seguenti numeri");
-foreach(var newNUm in num)
+foreach(var newNUm in num) // ciclo per mostrare i numeri inseriti
 {
     Console.WriteLine(newNUm);
+}
+*/
+
+
+
+//10. Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
+Console.Write("Inserisci un numero: "); //L'utente inserisce un numero
+int num = Convert.ToInt32(Console.ReadLine());
+
+Random rand = new Random(); // funzioen per generare un numero random
+for (int i = 0; i < num; i++) //ciclo per creare N array in base al numero inserito dall'utente
+{
+    int[] array = new int[10]; //creo array di 10 elementi
+    for (int j = 0; j < 10; j++) // vengono aggiunti 10 numeri da 1 a 100 casuali
+    {
+        array[j] = rand.Next(1, 100);
+    }
+    Console.WriteLine("Array #" + (i + 1) + ": " + string.Join(", ", array)); //vengono stampati gli N array con i 10 elementi casuali
 }
