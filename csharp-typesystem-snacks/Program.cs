@@ -25,7 +25,7 @@ else if (firstNum == secondNum)
 {
    Console.WriteLine("I numeri sono uguali."); // controlla se i numeri sono uguali e stampa un messaggio 
 }
-
+*/
 
 
 // 2. L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
@@ -44,18 +44,18 @@ Console.WriteLine("");
 if (
     firstWord.Length > secondWord.Length)
 {
-    Console.WriteLine(secondWord);
+    Console.WriteLine(firstWord + " " + secondWord);
 }
 else if(firstWord.Length < secondWord.Length)
 {
-    Console.WriteLine(firstWord);
+    Console.WriteLine(firstWord + " " + secondWord);
 }
 else if(firstWord.Length == secondWord.Length)
 {
     Console.WriteLine("Le parole hanno la stessa lunghezza");
 }
 
-
+/*
 
 //  3. Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
 int[] num = new int[10]; //dichiaro un array con 10 elemnti di tipo int all'interno
@@ -119,30 +119,28 @@ if (people.Contains(newPeople)) //Condizione per controllare se il nome dell'ute
 }
 else
     Console.WriteLine("Non puoi entrare");
-*/
 
 
 
 //7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
-using System;
-
-int[] num = new int[6];
-int newNum;
+int[] num = new int[6]; //dichiaro un array di grandezza 6
+int newNum; //dichiaro variabile per il numero inserito dall'utente
 
 Console.WriteLine("Inserisci 6 numeri: ");
 
-for (int i = 0; i < 6; i++)
+for (int i = 0; i < 6; i++) // ciclo for per inserire 6 volte un numero dall'utente, questo viene controllato e se è diospari inserito all'itenro dell'array
 {
     newNum = Convert.ToInt32(Console.ReadLine());
-    if (newNum % 2 == 1)
+    if (newNum % 2 == 1) // controllo del numero se è dispari
     {
-        num[i] = newNum;
+        num[i] = newNum; // se numero dispari viene inserito nell'array
     }
 }
 
-Console.WriteLine("Numeri dispari inseriti:");
-foreach (int oddNum in num)
+Console.WriteLine("Numeri dispari inseriti:"); 
+foreach (int oddNum in num) // ciclo per stampare i numeri dispari
 {
     Console.WriteLine(oddNum);
 }
+*/
 
