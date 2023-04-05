@@ -210,11 +210,10 @@ for (int i = 0; i < num; i++) //ciclo per creare N array in base al numero inser
     }
     Console.WriteLine("Array #" + (i + 1) + ": " + string.Join(", ", array)); //vengono stampati gli N array con i 10 elementi casuali, string join aggiunge virgola dopo ogni numero
 }
-*/
 
 
 
-//1. Dare la possibilità di inserire due parole.
+//11. Dare la possibilità di inserire due parole.
 //Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
 
 Console.WriteLine("Inserisci la prima parola:"); //l'utente inserisce la prima parola
@@ -223,27 +222,48 @@ string firstWord = Console.ReadLine();
 Console.WriteLine("Inserisci la seconda parola:"); //l'utente inserisce la seconda parola
 string secondWord = Console.ReadLine();
 
-checkWord(firstWord, secondWord);
+checkWord(firstWord, secondWord); //richiamo la funziona per controllare le parole inserite a cui ho passato come parametro le parole inserite
 
-static void checkWord(string firstWord, string secondWord)
+static void checkWord(string firstWord, string secondWord) // creo funzione dove dichiaro come argomento due stringhe
 {
 
-    if (firstWord.Length == secondWord.Length)
+    if (firstWord.Length == secondWord.Length) //controllo lunghezza parole
     {
-        Console.WriteLine("Le due parole hanno la stessa lunghezza:");
+        Console.WriteLine("Le due parole hanno la stessa lunghezza:"); //se hanno la stessa lunghezza vengono stampate entrambe
         Console.WriteLine(firstWord);
         Console.WriteLine(secondWord);
     }
     else
     {
         Console.WriteLine("Le due parole hanno lunghezze diverse.");
-        if (firstWord.Length > secondWord.Length)
+        if (firstWord.Length > secondWord.Length)   //Se la prima parola è più lunga della seconda, questa viene stampata
         {
             Console.WriteLine("La parola più lunga è: " + firstWord);
         }
         else
         {
-            Console.WriteLine("La parola più lunga è: " + secondWord);
+            Console.WriteLine("La parola più lunga è: " + secondWord); //Altrimenti viene stampata la seconda essendo più lunga
         }
     }
+}
+
+*/
+
+
+
+//  12. Scrivere una funzione per verificare se un numero è pari o dispari.
+// Quindi chiedere un numero all'utente e comunicargli se è pari o dispari.
+Console.WriteLine("Inserisci un numero: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+checkNum(num);
+
+static void checkNum(int num)
+{
+    if (num % 2 == 0)
+    {
+        Console.WriteLine($"Il numero inserito {num} è pari");
+    }
+    else
+        Console.WriteLine($"Il numero inserito {num} è dispari");
 }
